@@ -1,0 +1,679 @@
+/*
+ * Gradients v1.0.0
+ * Copyright 2022 Deiby
+ * The MIT License (MIT). Please see (https://github.com/deibyzen/gradients/blob/master/LICENSE) for more information.
+ */
+
+/*VARIABLES*/
+:root {
+--gradient-50-shades-of-grey: linear-gradient(to right, #bdc3c7, #2c3e50);
+--gradient-80s-purple: linear-gradient(to right, #41295a, #2f0743);
+--gradient-a-lost-memory: linear-gradient(to right, #de6262, #ffb88c);
+--gradient-ali: linear-gradient(to right, #ff4b1f, #1fddff);
+--gradient-alihossein: linear-gradient(to right, #f7ff00, #db36a4);
+--gradient-alive: linear-gradient(to right, #cb356b, #bd3f32);
+--gradient-almost: linear-gradient(to right, #ddd6f3, #faaca8);
+--gradient-amethyst: linear-gradient(to right, #9d50bb, #6e48aa);
+--gradient-amin: linear-gradient(to right, #4A00E0, #8E2DE2);
+--gradient-anamnisar: linear-gradient(to right, #9796f0, #fbc7d4);
+--gradient-anwar: linear-gradient(to right, #334d50, #cbcaa5);
+--gradient-aqualicious: linear-gradient(to right, #50c9c3, #96deda);
+--gradient-aqua-marine: linear-gradient(to right, #1a2980, #26d0ce);
+--gradient-argon: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
+--gradient-army: linear-gradient(to right, #414d0b, #727a17);
+--gradient-ash: linear-gradient(to right, #606c88, #3f4c6b);
+--gradient-atlas: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+--gradient-aubergine: linear-gradient(to right, #aa076b, #61045f);
+--gradient-autumn: linear-gradient(to right, #dad299, #b0dab9);
+--gradient-azure-pop: linear-gradient(to right, #ef32d9, #89fffd);
+--gradient-azur-lane: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+--gradient-back-to-earth: linear-gradient(to right, #00c9ff, #92fe9d);
+--gradient-back-to-the-future: linear-gradient(to right, #c02425, #f0cb35);
+--gradient-behongo: linear-gradient(to right, #52c234, #061700);
+--gradient-between-night-and-day: linear-gradient(to right, #2c3e50, #3498db);
+--gradient-between-the-clouds: linear-gradient(to right, #73c8a9, #373b44);
+--gradient-bighead: linear-gradient(to right, #4b134f, #c94b4b);
+--gradient-black-rose: linear-gradient(to right, #f4c4f3, #fc67fa);
+--gradient-blood-red: linear-gradient(to right, #f85032, #e73827);
+--gradient-bloody-mary: linear-gradient(to right, #ff512f, #dd2476);
+--gradient-blooker20: linear-gradient(to right, #e65c00, #f9d423);
+--gradient-blu: linear-gradient(to right, #00416a, #e4e5e6);
+--gradient-bluelagoo: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+--gradient-blue-raspberry: linear-gradient(to right, #0083B0, #00B4DB);
+--gradient-blue-skies: linear-gradient(to right, #56ccf2, #2f80ed);
+--gradient-blurry-beach: linear-gradient(to right, #d53369, #cbad6d);
+--gradient-blush: linear-gradient(to right, #b24592, #f15f79);
+--gradient-bora-bora: linear-gradient(to right, #2bc0e4, #eaecc6);
+--gradient-bourbon: linear-gradient(to right, #ec6f66, #f3a183);
+--gradient-brady-brady-fun-fun: linear-gradient(to right, #00c3ff, #ffff1c);
+--gradient-brightvault: linear-gradient(to right, #00d2ff, #928dab);
+--gradient-broken-hearts: linear-gradient(to right, #d9a7c7, #fffcdc);
+--gradient-bupe: linear-gradient(to right, #00416a, #e4e5e6);
+--gradient-burning-orange: linear-gradient(to right, #FF4B2B, #FF416C);
+--gradient-by-design: linear-gradient(to right, #ec2F4B, #009FFF);
+--gradient-calm-darya: linear-gradient(to right, #5f2c82, #49a09d);
+--gradient-candy: linear-gradient(to right, #d3959b, #bfe6ba);
+--gradient-can-you-feel-the-love-tonight: linear-gradient(to right, #4568dc, #b06ab3);
+--gradient-celestial: linear-gradient(to right, #c33764, #1d2671);
+--gradient-cheer-up-emo-kid: linear-gradient(to right, #556270, #ff6b6b);
+--gradient-cherry: linear-gradient(to right, #eb3349, #f45c43);
+--gradient-cherryblossoms: linear-gradient(to right, #fbd3e9, #bb377d);
+--gradient-chitty-chitty-bang-bang: linear-gradient(to right, #007991, #78ffd6);
+--gradient-christmas: linear-gradient(to right, #2f7336, #aa3a38);
+--gradient-cinnamint: linear-gradient(to right, #4ac29a, #bdfff3);
+--gradient-citrus-peel: linear-gradient(to right, #F37335, #FDC830);
+--gradient-clear-sky: linear-gradient(to right, #005c97, #363795);
+--gradient-clouds: linear-gradient(to right, #ece9e6, #ffffff);
+--gradient-coal: linear-gradient(to right, #eb5757, #000000);
+--gradient-cocoaa-ice: linear-gradient(to right, #c0c0aa, #1cefff);
+--gradient-colors-of-sky: linear-gradient(to right, #e0eafc, #cfdef3);
+--gradient-combi: linear-gradient(to right, #00416a, #799f0c, #ffe000);
+--gradient-compare-now: linear-gradient(to right, #ef3b36, #ffffff);
+--gradient-cool-blues: linear-gradient(to right, #6dd5ed, #2193b0);
+--gradient-cool-brown: linear-gradient(to right, #603813, #b29f94);
+--gradient-cool-sky: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+--gradient-copper: linear-gradient(to right, #b79891, #94716b);
+--gradient-cosmic-fusion: linear-gradient(to right, #ff00cc, #333399);
+--gradient-crazy-orange-i: linear-gradient(to right, #d38312, #a83279);
+--gradient-crimson-tide: linear-gradient(to right, #642b73, #c6426e);
+--gradient-crystal-clear: linear-gradient(to right, #159957, #155799);
+--gradient-curiosity-blue: linear-gradient(to right, #525252, #3d72b4);
+--gradient-dance-to-forget: linear-gradient(to right, #ff4e50, #f9d423);
+--gradient-dania: linear-gradient(to right, #be93c5, #7bc6cc);
+--gradient-dark-knight: linear-gradient(to right, #ba8b02, #181818);
+--gradient-dark-ocean: linear-gradient(to right, #4286f4, #373B44);
+--gradient-dark-skies: linear-gradient(to right, #4b79a1, #283e51);
+--gradient-dawn: linear-gradient(to right, #f3904f, #3b4371);
+--gradient-day-tripper: linear-gradient(to right, #f857a6, #ff5858);
+--gradient-decent: linear-gradient(to right, #4ca1af, #c4e0e5);
+--gradient-deep-purple: linear-gradient(to right, #673ab7, #512da8);
+--gradient-deep-sea-space: linear-gradient(to right, #2c3e50, #4ca1af);
+--gradient-deep-space: linear-gradient(to right, #000000, #434343);
+--gradient-delicate: linear-gradient(to right, #d3cce3, #e9e4f0);
+--gradient-digital-water: linear-gradient(to right, #74ebd5, #acb6e5);
+--gradient-dimigo: linear-gradient(to right, #ec008c, #fc6767);
+--gradient-dirty-fog: linear-gradient(to right, #b993d6, #8ca6db);
+--gradient-disco: linear-gradient(to right, #4ecdc4, #556270);
+--gradient-dracula: linear-gradient(to right, #dc2424, #4a569d);
+--gradient-dull: linear-gradient(to right, #c9d6ff, #e2e2e2);
+--gradient-dusk: linear-gradient(to right, #2c3e50, #fd746c);
+--gradient-earthly: linear-gradient(to right, #649173, #dbd5a4);
+--gradient-easy-med: linear-gradient(to right, #dce35b, #45b649);
+--gradient-eds-sunset-gradient: linear-gradient(to right, #ff7e5f, #feb47b);
+--gradient-electric-violet: linear-gradient(to right, #4776e6, #8e54e9);
+--gradient-emerald-water: linear-gradient(to right, #348f50, #56b4d3);
+--gradient-endless-river: linear-gradient(to right, #43cea2, #185a9d);
+--gradient-evening-night: linear-gradient(to right, #FFFDE4, #005AA7);
+--gradient-evening-sunshine: linear-gradient(to right, #1565C0, #b92b27);
+--gradient-expresso: linear-gradient(to right, #3c1053, #ad5389);
+--gradient-facebook-messenger: linear-gradient(to right, #00c6ff, #0072ff);
+--gradient-firewatch: linear-gradient(to right, #cb2d3e, #ef473a);
+--gradient-flare: linear-gradient(to right, #f5af19, #f12711);
+--gradient-flickr: linear-gradient(to right, #ff0084, #33001b);
+--gradient-forest: linear-gradient(to right, #5a3f37, #2c7744);
+--gradient-forever-lost: linear-gradient(to right, #5d4157, #a8caba);
+--gradient-fresh-turboscent: linear-gradient(to right, #f1f2b5, #135058);
+--gradient-friday: linear-gradient(to right, #83a4d4, #b6fbff);
+--gradient-frost: linear-gradient(to right, #000428, #004e92);
+--gradient-frozen: linear-gradient(to right, #403b4a, #e7e9bb);
+--gradient-grade-grey: linear-gradient(to right, #2c3e50, #bdc3c7);
+--gradient-grapefruit-sunset: linear-gradient(to right, #e96443, #904e95);
+--gradient-green-and-blue: linear-gradient(to right, #c2e59c, #64b3f4);
+--gradient-green-beach: linear-gradient(to right, #02aab0, #00cdac);
+--gradient-green-to-dark: linear-gradient(to right, #6a9113, #141517);
+--gradient-haikus: linear-gradient(to right, #fd746c, #ff9068);
+--gradient-harmonic-energy: linear-gradient(to right, #16a085, #f4d03f);
+--gradient-harvey: linear-gradient(to right, #99f2c8, #1f4037);
+--gradient-hazel: linear-gradient(to right, #77a1d3, #79cbca, #e684ae);
+--gradient-hersheys: linear-gradient(to right, #1e130c, #9a8478);
+--gradient-honey-dew: linear-gradient(to right, #43c6ac, #f8ffae);
+--gradient-horizon: linear-gradient(to right, #003973, #e5e5be);
+--gradient-html: linear-gradient(to right, #e44d26, #f16529);
+--gradient-hydrogen: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+--gradient-ibiza-sunset: linear-gradient(to right, #ee0979, #ff6a00);
+--gradient-iiit-delhi: linear-gradient(to right, #808080, #3fada8);
+--gradient-inbox: linear-gradient(to right, #457fca, #5691c8);
+--gradient-influenza: linear-gradient(to right, #c04848, #480048);
+--gradient-instagram: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+--gradient-intuitive-purple: linear-gradient(to right, #da22ff, #9733ee);
+--gradient-jaipur: linear-gradient(to right, #dbe6f6, #c5796d);
+--gradient-jodhpur: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+--gradient-jonquil: linear-gradient(to right, #ffeeee, #ddefbb);
+--gradient-joomla: linear-gradient(to right, #1e3c72, #2a5298);
+--gradient-jshine: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+--gradient-juicy-orange: linear-gradient(to right, #ff8008, #ffc837);
+--gradient-jupiter: linear-gradient(to right, #ffd89b, #19547b);
+--gradient-kashmir: linear-gradient(to right, #614385, #516395);
+--gradient-kimoby-is-the-new-blue: linear-gradient(to right, #396afc, #2948ff);
+--gradient-king-yna: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+--gradient-koko-caramel: linear-gradient(to right, #d1913c, #ffd194);
+--gradient-kye-meh: linear-gradient(to right, #2ebf91, #8360c3);
+--gradient-kyoo-pal: linear-gradient(to right, #6be585, #dd3e54);
+--gradient-kyoo-tah: linear-gradient(to right, #ffd452, #544a7d);
+--gradient-kyoto: linear-gradient(to right, #c21500, #ffc500);
+--gradient-lawrencium: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+--gradient-learning-and-leading: linear-gradient(to right, #f7971e, #ffd200);
+--gradient-lemon-twist: linear-gradient(to right, #3ca55c, #b5ac49);
+--gradient-light-orange: linear-gradient(to right, #ffb75e, #ed8f03);
+--gradient-limeade: linear-gradient(to right, #a1ffce, #faffd1);
+--gradient-lithium: linear-gradient(to right, #6d6027, #d3cbb8);
+--gradient-little-leaf: linear-gradient(to right, #76b852, #8dc26f);
+--gradient-lizard: linear-gradient(to right, #304352, #d7d2cc);
+--gradient-love-and-liberty: linear-gradient(to right, #200122, #6f0000);
+--gradient-love-couple: linear-gradient(to right, #3a6186, #89253e);
+--gradient-lunada: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+--gradient-lush: linear-gradient(to right, #56ab2f, #a8e063);
+--gradient-magic: linear-gradient(to right, #5D26C1, #a17fe0, #59C173);
+--gradient-maldives: linear-gradient(to right, #b2fefa, #0ed2f7);
+--gradient-mango: linear-gradient(to right, #ffe259, #ffa751);
+--gradient-mango-pulp: linear-gradient(to right, #f09819, #edde5d);
+--gradient-man-of-steel: linear-gradient(to right, #780206, #061161);
+--gradient-mantle: linear-gradient(to right, #24c6dc, #514a9d);
+--gradient-margo: linear-gradient(to right, #FFFFFF, #FFEFBA);
+--gradient-martini: linear-gradient(to right, #fdfc47, #24fe41);
+--gradient-master-card: linear-gradient(to right, #f46b45, #eea849);
+--gradient-mauve: linear-gradient(to right, #42275a, #734b6d);
+--gradient-megatron: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+--gradient-mello: linear-gradient(to right, #c0392b, #8e44ad);
+--gradient-memariani: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+--gradient-meridian: linear-gradient(to right, #283c86, #45a247);
+--gradient-metallic-toad: linear-gradient(to right, #abbaab, #ffffff);
+--gradient-metapolis: linear-gradient(to right, #f4791f, #659999);
+--gradient-miaka: linear-gradient(to right, #fc354c, #0abfbc);
+--gradient-miami-dolphins: linear-gradient(to right, #4da0b0, #d39d38);
+--gradient-midnight-city: linear-gradient(to right, #232526, #414345);
+--gradient-mild: linear-gradient(to right, #67b26f, #4ca2cd);
+--gradient-mini: linear-gradient(to right, #30e8bf, #ff8235);
+--gradient-minimal-red: linear-gradient(to right, #f00000, #dc281e);
+--gradient-minnesota-vikings: linear-gradient(to right, #5614b0, #dbd65c);
+--gradient-mirage: linear-gradient(to right, #16222a, #3a6073);
+--gradient-misty-meadow: linear-gradient(to right, #215f00, #e4e4d9);
+--gradient-mojito: linear-gradient(to right, #1d976c, #93f9b9);
+--gradient-monte-carlo: linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2);
+--gradient-moonlit-asteroid: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+--gradient-moon-purple: linear-gradient(to right, #8f94fb, #4e54c8);
+--gradient-moonrise: linear-gradient(to right, #dae2f8, #d6a4a4);
+--gradient-moor: linear-gradient(to right, #616161, #9bc5c3);
+--gradient-moss: linear-gradient(to right, #134e5e, #71b280);
+--gradient-mystic: linear-gradient(to right, #757f9a, #d7dde8);
+--gradient-namn: linear-gradient(to right, #a73737, #7a2828);
+--gradient-nelson: linear-gradient(to right, #f2709c, #ff9472);
+--gradient-neon-life: linear-gradient(to right, #b3ffab, #12fff7);
+--gradient-nepal: linear-gradient(to right, #de6161, #2657eb);
+--gradient-netflix: linear-gradient(to right, #8e0e00, #1f1c18);
+--gradient-neuromancer: linear-gradient(to right, #b91d73, #f953c6);
+--gradient-nighthawk: linear-gradient(to right, #2980b9, #2c3e50);
+--gradient-nimvelo: linear-gradient(to right, #314755, #26a0da);
+--gradient-noon-to-dusk: linear-gradient(to right, #ff6e7f, #bfe9ff);
+--gradient-ohhappiness: linear-gradient(to right, #00b09b, #96c93d);
+--gradient-opa: linear-gradient(to right, #3d7eaa, #ffe47a);
+--gradient-orange-coral: linear-gradient(to right, #ff9966, #ff5e62);
+--gradient-orange-fun: linear-gradient(to right, #fc4a1a, #f7b733);
+--gradient-orca: linear-gradient(to right, #44a08d, #093637);
+--gradient-pacific-dream: linear-gradient(to right, #34e89e, #0f3443);
+--gradient-pale-wood: linear-gradient(to right, #eacda3, #d6ae7b);
+--gradient-parklife: linear-gradient(to right, #add100, #7b920a);
+--gradient-passion: linear-gradient(to right, #e53935, #e35d5b);
+--gradient-pastel-orange-at-the-sun: linear-gradient(to right, #ffb347, #ffcc33);
+--gradient-peach: linear-gradient(to right, #ed4264, #ffedbc);
+--gradient-petrichor: linear-gradient(to right, #666600, #999966);
+--gradient-petrol: linear-gradient(to right, #bbd2c5, #536976);
+--gradient-piggy-pink: linear-gradient(to right, #ffdde1, #ee9ca7);
+--gradient-piglet: linear-gradient(to right, #ee9ca7, #ffdde1);
+--gradient-pink-flavour: linear-gradient(to right, #800080, #ffc0cb);
+--gradient-pinky: linear-gradient(to right, #dd5e89, #f7bb97);
+--gradient-pinot-noir: linear-gradient(to right, #4b6cb7, #182848);
+--gradient-pizelex: linear-gradient(to right, #114357, #f29492);
+--gradient-playing-with-reds: linear-gradient(to right, #d31027, #ea384d);
+--gradient-politics: linear-gradient(to right, #2196f3, #f44336);
+--gradient-poncho: linear-gradient(to right, #403a3e, #be5869);
+--gradient-portrait: linear-gradient(to right, #8e9eab, #eef2f3);
+--gradient-predawn: linear-gradient(to right, #ffa17f, #00223e);
+--gradient-pun-yeta: linear-gradient(to right, #ef8e38, #108dc7);
+--gradient-pure-lust: linear-gradient(to right, #dd1818, #333333);
+--gradient-purpink: linear-gradient(to right, #7f00ff, #e100ff);
+--gradient-purple-bliss: linear-gradient(to right, #360033, #0b8793);
+--gradient-purple-love: linear-gradient(to right, #cc2b5e, #753a88);
+--gradient-purple-paradise: linear-gradient(to right, #1d2b64, #f8cdda);
+--gradient-purplepine: linear-gradient(to right, #20002c, #cbb4d4);
+--gradient-purple-white: linear-gradient(to right, #ba5370, #f4e2d8);
+--gradient-purplin: linear-gradient(to right, #6a3093, #a044ff);
+--gradient-quepal: linear-gradient(to right, #38ef7d, #11998e);
+--gradient-radar: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+--gradient-rainbow-blue: linear-gradient(to right, #00f260, #0575e6);
+--gradient-rastafari: linear-gradient(to right, #FF0000, #FFF200, #1E9600);
+--gradient-rea: linear-gradient(to right, #ffe000, #799f0c);
+--gradient-reaqua: linear-gradient(to right, #799f0c, #acbb78);
+--gradient-red-mist: linear-gradient(to right, #000000, #e74c3c);
+--gradient-red-ocean: linear-gradient(to right, #1d4350, #a43931);
+--gradient-red-sunset: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+--gradient-reef: linear-gradient(to right, #00d2ff, #3a7bd5);
+--gradient-relaxing-red: linear-gradient(to right, #b20a2c, #fffbd5);
+--gradient-relay: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+--gradient-roseanna: linear-gradient(to right, #ffafbd, #ffc3a0);
+--gradient-rose-colored-lenses: linear-gradient(to right, #e8cbc0, #636fa4);
+--gradient-rose-water: linear-gradient(to right, #e55d87, #5fc3e4);
+--gradient-royal: linear-gradient(to right, #141e30, #243b55);
+--gradient-royal-blue: linear-gradient(to right, #536976, #292e49);
+--gradient-royal-blue-petrol: linear-gradient(to right, #bbd2c5, #536976, #292e49);
+--gradient-sage-persuasion: linear-gradient(to right, #ccccb2, #757519);
+--gradient-sand-to-blue: linear-gradient(to right, #DECBA4, #3E5151);
+--gradient-scooter: linear-gradient(to right, #36d1dc, #5b86e5);
+--gradient-sea-blizz: linear-gradient(to right, #1cd8d2, #93edc7);
+--gradient-sea-blue: linear-gradient(to right, #2b5876, #4e4376);
+--gradient-sea-weed: linear-gradient(to right, #4cb8c4, #3cd3ad);
+--gradient-sel: linear-gradient(to right, #00467f, #a5cc82);
+--gradient-selenium: linear-gradient(to right, #3c3b3f, #605c3c);
+--gradient-servquick: linear-gradient(to right, #485563, #29323c);
+--gradient-sexy-blue: linear-gradient(to right, #2193b0, #6dd5ed);
+--gradient-shahabi: linear-gradient(to right, #a80077, #66ff00);
+--gradient-sha-la-la: linear-gradient(to right, #d66d75, #e29587);
+--gradient-sherbert: linear-gradient(to right, #f79d00, #64f38c);
+--gradient-shifter: linear-gradient(to right, #f80759, #bc4e9c);
+--gradient-shifty: linear-gradient(to right, #a2ab58, #636363);
+--gradient-shore: linear-gradient(to right, #70e1f5, #ffd194);
+--gradient-shrimpy: linear-gradient(to right, #e43a15, #e65245);
+--gradient-shroomhaze: linear-gradient(to right, #5c258d, #4389a2);
+--gradient-sin-city-red: linear-gradient(to right, #93291E, #ED213A);
+--gradient-sirius-tamed: linear-gradient(to right, #efefbb, #d4d3dd);
+--gradient-sky: linear-gradient(to right, #076585, #fff);
+--gradient-skyline: linear-gradient(to right, #1488cc, #2b32b2);
+--gradient-slight-ocean-view: linear-gradient(to right, #3f2b96, #a8c0ff);
+--gradient-snapchat: linear-gradient(to right, #fffc00, #ffffff);
+--gradient-socialive: linear-gradient(to right, #06beb6, #48b1bf);
+--gradient-solid-vault: linear-gradient(to right, #3a7bd5, #3a6073);
+--gradient-sound-cloud: linear-gradient(to right, #fe8c00, #f83600);
+--gradient-starfall: linear-gradient(to right, #f0c27b, #4b1248);
+--gradient-steel-gray: linear-gradient(to right, #1f1c2c, #928dab);
+--gradient-stellar: linear-gradient(to right, #7474bf, #348ac7);
+--gradient-stripe: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+--gradient-sublime-light: linear-gradient(to right, #6A82FB, #FC5C7D);
+--gradient-sublime-vivid: linear-gradient(to right, #3F5EFB, #FC466B);
+--gradient-subu: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+--gradient-sulphur: linear-gradient(to right, #cac531, #f3f9a7);
+--gradient-summer: linear-gradient(to right, #22c1c3, #fdbb2d);
+--gradient-summer-dog: linear-gradient(to right, #78ffd6, #a8ff78);
+--gradient-sunkist: linear-gradient(to right, #f2994a, #f2c94c);
+--gradient-sunny-days: linear-gradient(to right, #ede574, #e1f5c4);
+--gradient-sun-on-the-horizon: linear-gradient(to right, #fceabb, #f8b500);
+--gradient-sunrise: linear-gradient(to right, #ff512f, #f09819);
+--gradient-sunset: linear-gradient(to right, #0b486b, #f56217);
+--gradient-superman: linear-gradient(to right, #0099f7, #f11712);
+--gradient-suzy: linear-gradient(to right, #834d9b, #d04ed6);
+--gradient-sweet-morning: linear-gradient(to right, #ff5f6d, #ffc371);
+--gradient-sylvia: linear-gradient(to right, #ff4b1f, #ff9068);
+--gradient-talking-to-mice-elf: linear-gradient(to right, #948e99, #2e1437);
+--gradient-taran-tado: linear-gradient(to right, #cc5333, #23074d);
+--gradient-teal-love: linear-gradient(to right, #aaffa9, #11ffbd);
+--gradient-telegram: linear-gradient(to right, #1c92d2, #f2fcfe);
+--gradient-terminal: linear-gradient(to right, #000000, #0f9b0f);
+--gradient-the-blue-lagoon: linear-gradient(to right, #43c6ac, #191654);
+--gradient-the-strain: linear-gradient(to right, #870000, #190a05);
+--gradient-timber: linear-gradient(to right, #fc00ff, #00dbde);
+--gradient-titanium: linear-gradient(to right, #283048, #859398);
+--gradient-tranquil: linear-gradient(to right, #eecda3, #ef629f);
+--gradient-transfile: linear-gradient(to right, #16bffd, #cb3066);
+--gradient-turquoise-flow: linear-gradient(to right, #136a8a, #267871);
+--gradient-twitch: linear-gradient(to right, #6441a5, #2a0845);
+--gradient-ukraine: linear-gradient(to right, #004ff9, #fff94c);
+--gradient-ultra-voilet: linear-gradient(to right, #eaafc8, #654ea3);
+--gradient-under-the-lake: linear-gradient(to right, #093028, #237a57);
+--gradient-vanusa: linear-gradient(to right, #89216B, #DA4453);
+--gradient-vasily: linear-gradient(to right, #e9d362, #333333);
+--gradient-velvet-sun: linear-gradient(to right, #e1eec3, #f05053);
+--gradient-venice: linear-gradient(to right, #6190e8, #a7bfe8);
+--gradient-venice-blue: linear-gradient(to right, #085078, #85d8ce);
+--gradient-ver: linear-gradient(to right, #ffe000, #799f0c);
+--gradient-ver-black: linear-gradient(to right, #f7f8f8, #acbb78);
+--gradient-very-blue: linear-gradient(to right, #0575e6, #021b79);
+--gradient-vice-city: linear-gradient(to right, #3494e6, #ec6ead);
+--gradient-vine: linear-gradient(to right, #00bf8f, #001510);
+--gradient-virgin: linear-gradient(to right, #c9ffbf, #ffafbd);
+--gradient-virgin-america: linear-gradient(to right, #7b4397, #dc2430);
+--gradient-visions-of-grandeur: linear-gradient(to right, #000046, #1cb5e0);
+--gradient-wedding-day-blues: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+--gradient-what-lies-beyond: linear-gradient(to right, #f0f2f0, #000c40);
+--gradient-windy: linear-gradient(to right, #acb6e5, #86fde8);
+--gradient-winter: linear-gradient(to right, #e6dada, #274046);
+--gradient-wiretap: linear-gradient(to right, #F27121, #E94057, #8A2387);
+--gradient-witching-hour: linear-gradient(to right, #240b36, #c31432);
+--gradient-yoda: linear-gradient(to right, #493240, #FF0099);
+--gradient-youtube: linear-gradient(to right, #e52d27, #b31217);
+--gradient-zinc: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+}
+
+/*GRADIENTS*/
+.gradient-50-shades-of-grey {background-image: var(--gradient-50-shades-of-grey);}
+.gradient-80s-purple {background-image: var(--gradient-80s-purple);}
+.gradient-a-lost-memory {background-image: var(--gradient-a-lost-memory);}
+.gradient-ali {background-image: var(--gradient-ali);}
+.gradient-alihossein {background-image: var(--gradient-alihossein);}
+.gradient-alive {background-image: var(--gradient-alive);}
+.gradient-almost {background-image: var(--gradient-almost);}
+.gradient-amethyst {background-image: var(--gradient-amethyst);}
+.gradient-amin {background-image: var(--gradient-amin);}
+.gradient-anamnisar {background-image: var(--gradient-anamnisar);}
+.gradient-anwar {background-image: var(--gradient-anwar);}
+.gradient-aqua-marine {background-image: var(--gradient-aqua-marine);}
+.gradient-aqualicious {background-image: var(--gradient-aqualicious);}
+.gradient-argon {background-image: var(--gradient-argon);}
+.gradient-army {background-image: var(--gradient-army);}
+.gradient-ash {background-image: var(--gradient-ash);}
+.gradient-atlas {background-image: var(--gradient-atlas);}
+.gradient-aubergine {background-image: var(--gradient-aubergine);}
+.gradient-autumn {background-image: var(--gradient-autumn);}
+.gradient-azur-lane {background-image: var(--gradient-azur-lane);}
+.gradient-azure-pop {background-image: var(--gradient-azure-pop);}
+.gradient-back-to-earth {background-image: var(--gradient-back-to-earth);}
+.gradient-back-to-the-future {background-image: var(--gradient-back-to-the-future);}
+.gradient-behongo {background-image: var(--gradient-behongo);}
+.gradient-between-night-and-day {background-image: var(--gradient-between-night-and-day);}
+.gradient-between-the-clouds {background-image: var(--gradient-between-the-clouds);}
+.gradient-bighead {background-image: var(--gradient-bighead);}
+.gradient-black-rose {background-image: var(--gradient-black-rose);}
+.gradient-blood-red {background-image: var(--gradient-blood-red);}
+.gradient-bloody-mary {background-image: var(--gradient-bloody-mary);}
+.gradient-blooker20 {background-image: var(--gradient-blooker20);}
+.gradient-blu {background-image: var(--gradient-blu);}
+.gradient-blue-raspberry {background-image: var(--gradient-blue-raspberry);}
+.gradient-blue-skies {background-image: var(--gradient-blue-skies);}
+.gradient-bluelagoo {background-image: var(--gradient-bluelagoo);}
+.gradient-blurry-beach {background-image: var(--gradient-blurry-beach);}
+.gradient-blush {background-image: var(--gradient-blush);}
+.gradient-bora-bora {background-image: var(--gradient-bora-bora);}
+.gradient-bourbon {background-image: var(--gradient-bourbon);}
+.gradient-brady-brady-fun-fun {background-image: var(--gradient-brady-brady-fun-fun);}
+.gradient-brightvault {background-image: var(--gradient-brightvault);}
+.gradient-broken-hearts {background-image: var(--gradient-broken-hearts);}
+.gradient-bupe {background-image: var(--gradient-bupe);}
+.gradient-burning-orange {background-image: var(--gradient-burning-orange);}
+.gradient-by-design {background-image: var(--gradient-by-design);}
+.gradient-calm-darya {background-image: var(--gradient-calm-darya);}
+.gradient-can-you-feel-the-love-tonight {background-image: var(--gradient-can-you-feel-the-love-tonight);}
+.gradient-candy {background-image: var(--gradient-candy);}
+.gradient-celestial {background-image: var(--gradient-celestial);}
+.gradient-cheer-up-emo-kid {background-image: var(--gradient-cheer-up-emo-kid);}
+.gradient-cherry {background-image: var(--gradient-cherry);}
+.gradient-cherryblossoms {background-image: var(--gradient-cherryblossoms);}
+.gradient-chitty-chitty-bang-bang {background-image: var(--gradient-chitty-chitty-bang-bang);}
+.gradient-christmas {background-image: var(--gradient-christmas);}
+.gradient-cinnamint {background-image: var(--gradient-cinnamint);}
+.gradient-citrus-peel {background-image: var(--gradient-citrus-peel);}
+.gradient-clear-sky {background-image: var(--gradient-clear-sky);}
+.gradient-clouds {background-image: var(--gradient-clouds);}
+.gradient-coal {background-image: var(--gradient-coal);}
+.gradient-cocoaa-ice {background-image: var(--gradient-cocoaa-ice);}
+.gradient-colors-of-sky {background-image: var(--gradient-colors-of-sky);}
+.gradient-combi {background-image: var(--gradient-combi);}
+.gradient-compare-now {background-image: var(--gradient-compare-now);}
+.gradient-cool-blues {background-image: var(--gradient-cool-blues);}
+.gradient-cool-brown {background-image: var(--gradient-cool-brown);}
+.gradient-cool-sky {background-image: var(--gradient-cool-sky);}
+.gradient-copper {background-image: var(--gradient-copper);}
+.gradient-cosmic-fusion {background-image: var(--gradient-cosmic-fusion);}
+.gradient-crazy-orange-i {background-image: var(--gradient-crazy-orange-i);}
+.gradient-crimson-tide {background-image: var(--gradient-crimson-tide);}
+.gradient-crystal-clear {background-image: var(--gradient-crystal-clear);}
+.gradient-curiosity-blue {background-image: var(--gradient-curiosity-blue);}
+.gradient-dance-to-forget {background-image: var(--gradient-dance-to-forget);}
+.gradient-dania {background-image: var(--gradient-dania);}
+.gradient-dark-knight {background-image: var(--gradient-dark-knight);}
+.gradient-dark-ocean {background-image: var(--gradient-dark-ocean);}
+.gradient-dark-skies {background-image: var(--gradient-dark-skies);}
+.gradient-dawn {background-image: var(--gradient-dawn);}
+.gradient-day-tripper {background-image: var(--gradient-day-tripper);}
+.gradient-decent {background-image: var(--gradient-decent);}
+.gradient-deep-purple {background-image: var(--gradient-deep-purple);}
+.gradient-deep-sea-space {background-image: var(--gradient-deep-sea-space);}
+.gradient-deep-space {background-image: var(--gradient-deep-space);}
+.gradient-delicate {background-image: var(--gradient-delicate);}
+.gradient-digital-water {background-image: var(--gradient-digital-water);}
+.gradient-dimigo {background-image: var(--gradient-dimigo);}
+.gradient-dirty-fog {background-image: var(--gradient-dirty-fog);}
+.gradient-disco {background-image: var(--gradient-disco);}
+.gradient-dracula {background-image: var(--gradient-dracula);}
+.gradient-dull {background-image: var(--gradient-dull);}
+.gradient-dusk {background-image: var(--gradient-dusk);}
+.gradient-earthly {background-image: var(--gradient-earthly);}
+.gradient-easy-med {background-image: var(--gradient-easy-med);}
+.gradient-eds-sunset-gradient {background-image: var(--gradient-eds-sunset-gradient);}
+.gradient-electric-violet {background-image: var(--gradient-electric-violet);}
+.gradient-emerald-water {background-image: var(--gradient-emerald-water);}
+.gradient-endless-river {background-image: var(--gradient-endless-river);}
+.gradient-evening-night {background-image: var(--gradient-evening-night);}
+.gradient-evening-sunshine {background-image: var(--gradient-evening-sunshine);}
+.gradient-expresso {background-image: var(--gradient-expresso);}
+.gradient-facebook-messenger {background-image: var(--gradient-facebook-messenger);}
+.gradient-firewatch {background-image: var(--gradient-firewatch);}
+.gradient-flare {background-image: var(--gradient-flare);}
+.gradient-flickr {background-image: var(--gradient-flickr);}
+.gradient-forest {background-image: var(--gradient-forest);}
+.gradient-forever-lost {background-image: var(--gradient-forever-lost);}
+.gradient-fresh-turboscent {background-image: var(--gradient-fresh-turboscent);}
+.gradient-friday {background-image: var(--gradient-friday);}
+.gradient-frost {background-image: var(--gradient-frost);}
+.gradient-frozen {background-image: var(--gradient-frozen);}
+.gradient-grade-grey {background-image: var(--gradient-grade-grey);}
+.gradient-grapefruit-sunset {background-image: var(--gradient-grapefruit-sunset);}
+.gradient-green-and-blue {background-image: var(--gradient-green-and-blue);}
+.gradient-green-beach {background-image: var(--gradient-green-beach);}
+.gradient-green-to-dark {background-image: var(--gradient-green-to-dark);}
+.gradient-haikus {background-image: var(--gradient-haikus);}
+.gradient-harmonic-energy {background-image: var(--gradient-harmonic-energy);}
+.gradient-harvey {background-image: var(--gradient-harvey);}
+.gradient-hazel {background-image: var(--gradient-hazel);}
+.gradient-hersheys {background-image: var(--gradient-hersheys);}
+.gradient-honey-dew {background-image: var(--gradient-honey-dew);}
+.gradient-horizon {background-image: var(--gradient-horizon);}
+.gradient-html {background-image: var(--gradient-html);}
+.gradient-hydrogen {background-image: var(--gradient-hydrogen);}
+.gradient-ibiza-sunset {background-image: var(--gradient-ibiza-sunset);}
+.gradient-iiit-delhi {background-image: var(--gradient-iiit-delhi);}
+.gradient-inbox {background-image: var(--gradient-inbox);}
+.gradient-influenza {background-image: var(--gradient-influenza);}
+.gradient-instagram {background-image: var(--gradient-instagram);}
+.gradient-intuitive-purple {background-image: var(--gradient-intuitive-purple);}
+.gradient-jaipur {background-image: var(--gradient-jaipur);}
+.gradient-jodhpur {background-image: var(--gradient-jodhpur);}
+.gradient-jonquil {background-image: var(--gradient-jonquil);}
+.gradient-joomla {background-image: var(--gradient-joomla);}
+.gradient-jshine {background-image: var(--gradient-jshine);}
+.gradient-juicy-orange {background-image: var(--gradient-juicy-orange);}
+.gradient-jupiter {background-image: var(--gradient-jupiter);}
+.gradient-kashmir {background-image: var(--gradient-kashmir);}
+.gradient-kimoby-is-the-new-blue {background-image: var(--gradient-kimoby-is-the-new-blue);}
+.gradient-king-yna {background-image: var(--gradient-king-yna);}
+.gradient-koko-caramel {background-image: var(--gradient-koko-caramel);}
+.gradient-kye-meh {background-image: var(--gradient-kye-meh);}
+.gradient-kyoo-pal {background-image: var(--gradient-kyoo-pal);}
+.gradient-kyoo-tah {background-image: var(--gradient-kyoo-tah);}
+.gradient-kyoto {background-image: var(--gradient-kyoto);}
+.gradient-lawrencium {background-image: var(--gradient-lawrencium);}
+.gradient-learning-and-leading {background-image: var(--gradient-learning-and-leading);}
+.gradient-lemon-twist {background-image: var(--gradient-lemon-twist);}
+.gradient-light-orange {background-image: var(--gradient-light-orange);}
+.gradient-limeade {background-image: var(--gradient-limeade);}
+.gradient-lithium {background-image: var(--gradient-lithium);}
+.gradient-little-leaf {background-image: var(--gradient-little-leaf);}
+.gradient-lizard {background-image: var(--gradient-lizard);}
+.gradient-love-and-liberty {background-image: var(--gradient-love-and-liberty);}
+.gradient-love-couple {background-image: var(--gradient-love-couple);}
+.gradient-lunada {background-image: var(--gradient-lunada);}
+.gradient-lush {background-image: var(--gradient-lush);}
+.gradient-magic {background-image: var(--gradient-magic);}
+.gradient-maldives {background-image: var(--gradient-maldives);}
+.gradient-man-of-steel {background-image: var(--gradient-man-of-steel);}
+.gradient-mango {background-image: var(--gradient-mango);}
+.gradient-mango-pulp {background-image: var(--gradient-mango-pulp);}
+.gradient-mantle {background-image: var(--gradient-mantle);}
+.gradient-margo {background-image: var(--gradient-margo);}
+.gradient-martini {background-image: var(--gradient-martini);}
+.gradient-master-card {background-image: var(--gradient-master-card);}
+.gradient-mauve {background-image: var(--gradient-mauve);}
+.gradient-megatron {background-image: var(--gradient-megatron);}
+.gradient-mello {background-image: var(--gradient-mello);}
+.gradient-memariani {background-image: var(--gradient-memariani);}
+.gradient-meridian {background-image: var(--gradient-meridian);}
+.gradient-metallic-toad {background-image: var(--gradient-metallic-toad);}
+.gradient-metapolis {background-image: var(--gradient-metapolis);}
+.gradient-miaka {background-image: var(--gradient-miaka);}
+.gradient-miami-dolphins {background-image: var(--gradient-miami-dolphins);}
+.gradient-midnight-city {background-image: var(--gradient-midnight-city);}
+.gradient-mild {background-image: var(--gradient-mild);}
+.gradient-mini {background-image: var(--gradient-mini);}
+.gradient-minimal-red {background-image: var(--gradient-minimal-red);}
+.gradient-minnesota-vikings {background-image: var(--gradient-minnesota-vikings);}
+.gradient-mirage {background-image: var(--gradient-mirage);}
+.gradient-misty-meadow {background-image: var(--gradient-misty-meadow);}
+.gradient-mojito {background-image: var(--gradient-mojito);}
+.gradient-monte-carlo {background-image: var(--gradient-monte-carlo);}
+.gradient-moon-purple {background-image: var(--gradient-moon-purple);}
+.gradient-moonlit-asteroid {background-image: var(--gradient-moonlit-asteroid);}
+.gradient-moonrise {background-image: var(--gradient-moonrise);}
+.gradient-moor {background-image: var(--gradient-moor);}
+.gradient-moss {background-image: var(--gradient-moss);}
+.gradient-mystic {background-image: var(--gradient-mystic);}
+.gradient-namn {background-image: var(--gradient-namn);}
+.gradient-nelson {background-image: var(--gradient-nelson);}
+.gradient-neon-life {background-image: var(--gradient-neon-life);}
+.gradient-nepal {background-image: var(--gradient-nepal);}
+.gradient-netflix {background-image: var(--gradient-netflix);}
+.gradient-neuromancer {background-image: var(--gradient-neuromancer);}
+.gradient-nighthawk {background-image: var(--gradient-nighthawk);}
+.gradient-nimvelo {background-image: var(--gradient-nimvelo);}
+.gradient-noon-to-dusk {background-image: var(--gradient-noon-to-dusk);}
+.gradient-ohhappiness {background-image: var(--gradient-ohhappiness);}
+.gradient-opa {background-image: var(--gradient-opa);}
+.gradient-orange-coral {background-image: var(--gradient-orange-coral);}
+.gradient-orange-fun {background-image: var(--gradient-orange-fun);}
+.gradient-orca {background-image: var(--gradient-orca);}
+.gradient-pacific-dream {background-image: var(--gradient-pacific-dream);}
+.gradient-pale-wood {background-image: var(--gradient-pale-wood);}
+.gradient-parklife {background-image: var(--gradient-parklife);}
+.gradient-passion {background-image: var(--gradient-passion);}
+.gradient-pastel-orange-at-the-sun {background-image: var(--gradient-pastel-orange-at-the-sun);}
+.gradient-peach {background-image: var(--gradient-peach);}
+.gradient-petrichor {background-image: var(--gradient-petrichor);}
+.gradient-petrol {background-image: var(--gradient-petrol);}
+.gradient-piggy-pink {background-image: var(--gradient-piggy-pink);}
+.gradient-piglet {background-image: var(--gradient-piglet);}
+.gradient-pink-flavour {background-image: var(--gradient-pink-flavour);}
+.gradient-pinky {background-image: var(--gradient-pinky);}
+.gradient-pinot-noir {background-image: var(--gradient-pinot-noir);}
+.gradient-pizelex {background-image: var(--gradient-pizelex);}
+.gradient-playing-with-reds {background-image: var(--gradient-playing-with-reds);}
+.gradient-politics {background-image: var(--gradient-politics);}
+.gradient-poncho {background-image: var(--gradient-poncho);}
+.gradient-portrait {background-image: var(--gradient-portrait);}
+.gradient-predawn {background-image: var(--gradient-predawn);}
+.gradient-pun-yeta {background-image: var(--gradient-pun-yeta);}
+.gradient-pure-lust {background-image: var(--gradient-pure-lust);}
+.gradient-purpink {background-image: var(--gradient-purpink);}
+.gradient-purple-bliss {background-image: var(--gradient-purple-bliss);}
+.gradient-purple-love {background-image: var(--gradient-purple-love);}
+.gradient-purple-paradise {background-image: var(--gradient-purple-paradise);}
+.gradient-purple-white {background-image: var(--gradient-purple-white);}
+.gradient-purplepine {background-image: var(--gradient-purplepine);}
+.gradient-purplin {background-image: var(--gradient-purplin);}
+.gradient-quepal {background-image: var(--gradient-quepal);}
+.gradient-radar {background-image: var(--gradient-radar);}
+.gradient-rainbow-blue {background-image: var(--gradient-rainbow-blue);}
+.gradient-rastafari {background-image: var(--gradient-rastafari);}
+.gradient-rea {background-image: var(--gradient-rea);}
+.gradient-reaqua {background-image: var(--gradient-reaqua);}
+.gradient-red-mist {background-image: var(--gradient-red-mist);}
+.gradient-red-ocean {background-image: var(--gradient-red-ocean);}
+.gradient-red-sunset {background-image: var(--gradient-red-sunset);}
+.gradient-reef {background-image: var(--gradient-reef);}
+.gradient-relaxing-red {background-image: var(--gradient-relaxing-red);}
+.gradient-relay {background-image: var(--gradient-relay);}
+.gradient-rose-colored-lenses {background-image: var(--gradient-rose-colored-lenses);}
+.gradient-rose-water {background-image: var(--gradient-rose-water);}
+.gradient-roseanna {background-image: var(--gradient-roseanna);}
+.gradient-royal {background-image: var(--gradient-royal);}
+.gradient-royal-blue {background-image: var(--gradient-royal-blue);}
+.gradient-royal-blue-petrol {background-image: var(--gradient-royal-blue-petrol);}
+.gradient-sage-persuasion {background-image: var(--gradient-sage-persuasion);}
+.gradient-sand-to-blue {background-image: var(--gradient-sand-to-blue);}
+.gradient-scooter {background-image: var(--gradient-scooter);}
+.gradient-sea-blizz {background-image: var(--gradient-sea-blizz);}
+.gradient-sea-blue {background-image: var(--gradient-sea-blue);}
+.gradient-sea-weed {background-image: var(--gradient-sea-weed);}
+.gradient-sel {background-image: var(--gradient-sel);}
+.gradient-selenium {background-image: var(--gradient-selenium);}
+.gradient-servquick {background-image: var(--gradient-servquick);}
+.gradient-sexy-blue {background-image: var(--gradient-sexy-blue);}
+.gradient-sha-la-la {background-image: var(--gradient-sha-la-la);}
+.gradient-shahabi {background-image: var(--gradient-shahabi);}
+.gradient-sherbert {background-image: var(--gradient-sherbert);}
+.gradient-shifter {background-image: var(--gradient-shifter);}
+.gradient-shifty {background-image: var(--gradient-shifty);}
+.gradient-shore {background-image: var(--gradient-shore);}
+.gradient-shrimpy {background-image: var(--gradient-shrimpy);}
+.gradient-shroomhaze {background-image: var(--gradient-shroomhaze);}
+.gradient-sin-city-red {background-image: var(--gradient-sin-city-red);}
+.gradient-sirius-tamed {background-image: var(--gradient-sirius-tamed);}
+.gradient-sky {background-image: var(--gradient-sky);}
+.gradient-skyline {background-image: var(--gradient-skyline);}
+.gradient-slight-ocean-view {background-image: var(--gradient-slight-ocean-view);}
+.gradient-snapchat {background-image: var(--gradient-snapchat);}
+.gradient-socialive {background-image: var(--gradient-socialive);}
+.gradient-solid-vault {background-image: var(--gradient-solid-vault);}
+.gradient-sound-cloud {background-image: var(--gradient-sound-cloud);}
+.gradient-starfall {background-image: var(--gradient-starfall);}
+.gradient-steel-gray {background-image: var(--gradient-steel-gray);}
+.gradient-stellar {background-image: var(--gradient-stellar);}
+.gradient-stripe {background-image: var(--gradient-stripe);}
+.gradient-sublime-light {background-image: var(--gradient-sublime-light);}
+.gradient-sublime-vivid {background-image: var(--gradient-sublime-vivid);}
+.gradient-subu {background-image: var(--gradient-subu);}
+.gradient-sulphur {background-image: var(--gradient-sulphur);}
+.gradient-summer {background-image: var(--gradient-summer);}
+.gradient-summer-dog {background-image: var(--gradient-summer-dog);}
+.gradient-sun-on-the-horizon {background-image: var(--gradient-sun-on-the-horizon);}
+.gradient-sunkist {background-image: var(--gradient-sunkist);}
+.gradient-sunny-days {background-image: var(--gradient-sunny-days);}
+.gradient-sunrise {background-image: var(--gradient-sunrise);}
+.gradient-sunset {background-image: var(--gradient-sunset);}
+.gradient-superman {background-image: var(--gradient-superman);}
+.gradient-suzy {background-image: var(--gradient-suzy);}
+.gradient-sweet-morning {background-image: var(--gradient-sweet-morning);}
+.gradient-sylvia {background-image: var(--gradient-sylvia);}
+.gradient-talking-to-mice-elf {background-image: var(--gradient-talking-to-mice-elf);}
+.gradient-taran-tado {background-image: var(--gradient-taran-tado);}
+.gradient-teal-love {background-image: var(--gradient-teal-love);}
+.gradient-telegram {background-image: var(--gradient-telegram);}
+.gradient-terminal {background-image: var(--gradient-terminal);}
+.gradient-the-blue-lagoon {background-image: var(--gradient-the-blue-lagoon);}
+.gradient-the-strain {background-image: var(--gradient-the-strain);}
+.gradient-timber {background-image: var(--gradient-timber);}
+.gradient-titanium {background-image: var(--gradient-titanium);}
+.gradient-tranquil {background-image: var(--gradient-tranquil);}
+.gradient-transfile {background-image: var(--gradient-transfile);}
+.gradient-turquoise-flow {background-image: var(--gradient-turquoise-flow);}
+.gradient-twitch {background-image: var(--gradient-twitch);}
+.gradient-ukraine {background-image: var(--gradient-ukraine);}
+.gradient-ultra-voilet {background-image: var(--gradient-ultra-voilet);}
+.gradient-under-the-lake {background-image: var(--gradient-under-the-lake);}
+.gradient-vanusa {background-image: var(--gradient-vanusa);}
+.gradient-vasily {background-image: var(--gradient-vasily);}
+.gradient-velvet-sun {background-image: var(--gradient-velvet-sun);}
+.gradient-venice {background-image: var(--gradient-venice);}
+.gradient-venice-blue {background-image: var(--gradient-venice-blue);}
+.gradient-ver {background-image: var(--gradient-ver);}
+.gradient-ver-black {background-image: var(--gradient-ver-black);}
+.gradient-very-blue {background-image: var(--gradient-very-blue);}
+.gradient-vice-city {background-image: var(--gradient-vice-city);}
+.gradient-vine {background-image: var(--gradient-vine);}
+.gradient-virgin {background-image: var(--gradient-virgin);}
+.gradient-virgin-america {background-image: var(--gradient-virgin-america);}
+.gradient-visions-of-grandeur {background-image: var(--gradient-visions-of-grandeur);}
+.gradient-wedding-day-blues {background-image: var(--gradient-wedding-day-blues);}
+.gradient-what-lies-beyond {background-image: var(--gradient-what-lies-beyond);}
+.gradient-windy {background-image: var(--gradient-windy);}
+.gradient-winter {background-image: var(--gradient-winter);}
+.gradient-wiretap {background-image: var(--gradient-wiretap);}
+.gradient-witching-hour {background-image: var(--gradient-witching-hour);}
+.gradient-yoda {background-image: var(--gradient-yoda);}
+.gradient-youtube {background-image: var(--gradient-youtube);}
+.gradient-zinc {background-image: var(--gradient-zinc);}
